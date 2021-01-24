@@ -19,7 +19,9 @@ Vue.http = Vue.prototype.$http = axios
 {{/isEnabled}}
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'false'
+
+  /* eslint-disable no-new */
 new Vue({
   components: { App },
   {{#isEnabled plugins 'vue-router'}}
