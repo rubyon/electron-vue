@@ -150,7 +150,7 @@ module.exports = {
       })
 
       return output
-    },
+    }
   },
   filters: {
     'src/renderer/routes.js': 'plugins[\'vue-router\']',
