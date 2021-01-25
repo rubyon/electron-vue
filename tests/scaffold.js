@@ -29,10 +29,8 @@ function generate (key, build) {
     .when(/plugins/g).respond(build[5])
     .when(/ESLint/g).respond(build[6])
     .when(/config/g).respond(build[7])
-    .when(/unit/g).respond(build[8])
-    .when(/end-to-end/g).respond(build[9])
-    .when(/build tool/g).respond(build[10])
-    .when(/author/g).respond(build[11])
+    .when(/build tool/g).respond(build[8])
+    .when(/author/g).respond(build[9])
   .on('error', err => {
     console.log(err.message)
   })
