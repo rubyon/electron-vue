@@ -26,10 +26,10 @@
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src",
     "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src",
     {{/if}}
-    "pack": "npm run pack:main && npm run pack:renderer",
-    "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
-    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
-    "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
+    "pack": "yarn run pack:main && yarn run pack:renderer",
+    "pack:main": "cross-env NODE_ENV=production webpack --progress --config .electron-vue/webpack.main.config.js",
+    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --config .electron-vue/webpack.renderer.config.js",
+    "postinstall": "{{#if eslint}}yarn run lint:fix{{/if}}"
   },
   {{#if_eq builder 'builder'}}
   "build": {
