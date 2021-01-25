@@ -8,7 +8,7 @@ electron-vue comes packed with the following `vue` plugins that can be installed
 * [vuex](https://github.com/vuejs/vuex) \(flux-inspired application architecture\)
 
 ---
-
+``````
 ### [`axios`](https://github.com/mzabriskie/axios)
 
 > Promise based HTTP client for the browser and node.js
