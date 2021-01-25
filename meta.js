@@ -110,16 +110,6 @@ module.exports = {
         }
       ]
     },
-    unit: {
-      type: 'confirm',
-      message: 'Set up unit testing with Karma + Mocha?',
-      required: true
-    },
-    e2e: {
-      type: 'confirm',
-      message: 'Set up end-to-end testing with Spectron + Mocha?',
-      require: true
-    },
     builder: {
       type: 'list',
       message: 'What build tool would you like to use?',
@@ -161,21 +151,13 @@ module.exports = {
 
       return output
     },
-    testing (unit, e2e, opts) {
-      if (unit || e2e) {
-        return opts.fn(this)
-      }
-    }
   },
   filters: {
     'src/renderer/routes.js': 'plugins[\'vue-router\']',
     'src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
     'src/renderer/router/**/*': 'plugins[\'vue-router\']',
     'src/renderer/store/**/*': 'plugins[\'vuex\']',
-    'test/e2e/**/*': 'e2e',
-    'test/unit/**/*': 'unit',
     '.electron-vue/build.config.js': 'builder === \'packager\'',
-    'test/.eslintrc': 'e2e || unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
     'appveyor.yml': 'builder === \'builder\'',

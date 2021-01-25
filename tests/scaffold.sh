@@ -9,9 +9,6 @@ node scaffold.js "$1"
 cd "$PWD/builds/$1"
 yarn
 
-# Run unit/e2e testing
-yarn test
-
 # Run webpack and build electron
 yarn run build
 

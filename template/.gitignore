@@ -3,9 +3,6 @@ dist/electron/*
 dist/web/*
 build/*
 !build/icons
-{{#if unit}}
-coverage
-{{/if}}
 node_modules/
 npm-debug.log
 npm-debug.log.*
