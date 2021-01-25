@@ -150,6 +150,11 @@ module.exports = {
       })
 
       return output
+    },
+    testing (unit, e2e, opts) {
+      if (unit || e2e) {
+        return opts.fn(this)
+      }
     }
   },
   filters: {
