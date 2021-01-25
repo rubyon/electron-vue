@@ -98,7 +98,7 @@
     "electron-builder": "^22.9.1",
     {{/if_eq}}
     {{#eslint}}
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^7.2.3",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.2.1",
