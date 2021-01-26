@@ -116,22 +116,22 @@ function bundleApp () {
 }
 
 {{/if_eq}}
-  function web () {
-    del.sync(['dist/web/*', '!.gitkeep'])
-    webConfig.mode = 'production'
-    webpack(webConfig, (err, stats) => {
-      if (err || stats.hasErrors()) console.log(err)
+function web () {
+  del.sync(['dist/web/*', '!.gitkeep'])
+  webConfig.mode = 'production'
+  webpack(webConfig, (err, stats) => {
+    if (err || stats.hasErrors()) console.log(err)
 
-      console.log(stats.toString({
-        chunks: false,
-        colors: true
-      }))
+    console.log(stats.toString({
+      chunks: false,
+      colors: true
+    }))
 
-      process.exit()
-    })
-  }
+    process.exit()
+  })
+}
 
-  function greeting () {
+function greeting () {
   const cols = process.stdout.columns
   let text = ''
 
