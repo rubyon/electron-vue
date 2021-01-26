@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   parserOptions: {
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
   env: {
@@ -9,11 +9,15 @@ module.exports = {
     node: true
   },
   {{#if_eq eslintConfig 'standard'}}
-  extends: 'standard',
+  extends: [
+    'standard',
   {{/if_eq}}
   {{#if_eq eslintConfig 'airbnb'}}
-  extends: 'airbnb-base',
+  extends: [
+    'airbnb-base',
   {{/if_eq}}
+    'plugin:vue/recommended'
+  ],
   globals: {
     __static: true
   },
