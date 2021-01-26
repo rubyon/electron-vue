@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     'html'
   ],
-  'rules': {
+  rules: {
     {{#if_eq eslintConfig 'standard'}}
     // allow paren-less arrow functions
     'arrow-parens': 0,
