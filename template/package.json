@@ -105,7 +105,6 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^5.0.0",
     {{/if_eq}}
     {{#if_eq eslintConfig 'airbnb'}}
     "eslint-config-airbnb-base": "^14.2.1",
