@@ -6,7 +6,7 @@ const path = require('path')
  */
 
 let arch = 'x64'
-if (process.env.BUILD_TARGET === 'm1')
+if (process.env.BUILD_TARGET === 'darwin')
   arch = 'arm64'
 
 module.exports = {
