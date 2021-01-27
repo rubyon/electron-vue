@@ -56,7 +56,7 @@ let webConfig = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        include: [ path.resolve(__dirname, '../src/renderer') ],
+        include: path.resolve(__dirname, '../src/renderer'),
         exclude: /node_modules/
       },
       {

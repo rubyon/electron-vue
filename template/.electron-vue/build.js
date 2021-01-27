@@ -11,7 +11,7 @@ const packager = require('electron-packager')
 const { spawn } = require('child_process')
 {{/if_eq}}
 const webpack = require('webpack')
-const Multispinner = require('multispinner')
+const multispinner = require('multispinner')
 
 {{#if_eq builder 'packager'}}const buildConfig = require('./build.config'){{/if_eq}}
 const mainConfig = require('./webpack.main.config')
@@ -39,7 +39,7 @@ function build () {
   del.sync(['dist/electron/*', '!.gitkeep'])
 
   const tasks = ['main', 'renderer']
-  const m = new Multispinner(tasks, {
+  const m = new multispinner(tasks, {
     preText: 'building',
     postText: 'process'
   })
